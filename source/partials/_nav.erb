@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand title" style="font-size: 2em;" href="/">Rachel Vernall</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link <%= "active" if current_page.path == 'gallery.html' %>" href="/gallery.html"><span>Gallery</span></a>
+      <a class="nav-item nav-link <%= "active" if current_page.path == 'about.html' %>" href="/about.html"><span>About</span></a>
+      <a class="nav-item nav-link <%= "active" if current_page.path == 'exhibits.html' %>" href="/exhibits.html"><span>Exhibitions<span></a>
+      <!-- <a class="nav-item nav-link <%= "active" if current_page.path == 'shop.html' %>" href="/shop.html"><span>Shop<span></a> -->
+      <a class="nav-item nav-link <%= "active" if current_page.path == 'shop.html' %>" href="https://www.etsy.com/uk/shop/RachelVernall" target="_blank">Shop</a>
+      <a class="nav-item nav-link <%= "active" if current_page.path == 'contact.html' %>" href="/contact.html"><span>Contact<span></a>
+    </div>
+  </div>
+</nav>
