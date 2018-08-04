@@ -1,0 +1,136 @@
+@import url(navbar.css);
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+body {
+  font-family: 'Libre Baskerville', serif; }
+
+.title {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif; }
+
+.home {
+  padding: 10% 20%; }
+  .home .home-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .home .home-image .image {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      -ms-flex-item-align: center;
+          align-self: center; }
+  .home .carousel-fade .carousel-item {
+    -webkit-transition-duration: 8.5s;
+            transition-duration: 8.5s; }
+
+.about {
+  padding: 10% 0;
+  width: 70%; }
+  .about .bio-row-one {
+    padding-bottom: 5%; }
+  .about .image {
+    max-height: 380px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .about .image .bio {
+      margin-top: 28%;
+      width: 100%;
+      -ms-flex-item-align: center;
+          align-self: center;
+      z-index: -1; }
+
+.contact {
+  padding: 10% 0;
+  width: 70%; }
+  .contact .show {
+    text-align: center; }
+
+.gallery {
+  margin: 0;
+  padding: 10% 1%;
+  /* Create four equal columns that sits next to each other */
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */ }
+  .gallery .row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px; }
+  .gallery .column {
+    -ms-flex: 33%;
+    /* IE10 */
+    -webkit-box-flex: 33%;
+            flex: 33%;
+    max-width: 33%;
+    padding: 0 4px; }
+    .gallery .column .artpiece {
+      position: relative;
+      margin-bottom: 8px; }
+    .gallery .column .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      -webkit-transition: .5s ease;
+      transition: .5s ease;
+      background-color: rgba(15, 15, 15, 0.7); }
+    .gallery .column .artpiece:hover .overlay {
+      opacity: 1; }
+    .gallery .column .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center; }
+  .gallery .column img {
+    margin-top: 8px;
+    vertical-align: middle; }
+  @media screen and (max-width: 800px) {
+    .gallery .column {
+      -ms-flex: 50%;
+      -webkit-box-flex: 50%;
+              flex: 50%;
+      max-width: 50%; } }
+  @media screen and (max-width: 600px) {
+    .gallery .column {
+      -ms-flex: 100%;
+      -webkit-box-flex: 100%;
+              flex: 100%;
+      max-width: 100%; } }
+
+.post-content img {
+  width: 90%;
+  margin: 0 auto;
+  display: inherit; }
+
+.exhibits {
+  padding: 10% 0;
+  width: 70%; }
+  .exhibits .show .show-image {
+    max-height: 180px;
+    overflow: hidden; }
+    .exhibits .show .show-image img {
+      width: 100%; }
+
+.shop {
+  padding: 10% 0;
+  width: 70%; }
+  .shop .image img {
+    max-height: 400px; }
