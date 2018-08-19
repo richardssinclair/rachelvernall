@@ -28,23 +28,23 @@ body {
             transition-duration: 8.5s; }
 
 .about {
-  padding: 10% 0;
+  padding-top: 100px;
   width: 70%; }
   .about .bio-row-one {
     padding-bottom: 5%; }
+  .about .bio-text {
+    text-align: justify; }
   .about .image {
-    max-height: 380px;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    margin-bottom: 8%; }
     .about .image .bio {
-      margin-top: 28%;
       width: 100%;
       -ms-flex-item-align: center;
           align-self: center;
       z-index: -1; }
 
+@media screen and (max-width: 400px) {
+  .about {
+    width: 100%; } }
 .contact {
   padding: 10% 0;
   width: 70%; }
@@ -53,7 +53,7 @@ body {
 
 .gallery {
   margin: 0;
-  padding: 10% 1%;
+  padding-top: 100px;
   /* Create four equal columns that sits next to each other */
   /* Responsive layout - makes a two column-layout instead of four columns */
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */ }
@@ -66,6 +66,9 @@ body {
     /* IE10 */
     flex-wrap: wrap;
     padding: 0 4px; }
+  .gallery .galleryFilter {
+    margin: 0 auto;
+    text-align: center; }
   .gallery .column {
     -ms-flex: 33%;
     /* IE10 */
@@ -75,7 +78,11 @@ body {
     padding: 0 4px; }
     .gallery .column .artpiece {
       position: relative;
-      margin-bottom: 8px; }
+      margin-bottom: 8px;
+      overflow: hidden; }
+    .gallery .column .artpiece img {
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out; }
     .gallery .column .overlay {
       position: absolute;
       top: 0;
@@ -90,6 +97,10 @@ body {
       background-color: rgba(15, 15, 15, 0.7); }
     .gallery .column .artpiece:hover .overlay {
       opacity: 1; }
+    .gallery .column .artpiece:hover img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+      overflow: hidden; }
     .gallery .column .text {
       color: white;
       font-size: 20px;
@@ -121,13 +132,16 @@ body {
   display: inherit; }
 
 .exhibits {
-  padding: 10% 0;
+  padding-top: 100px;
   width: 70%; }
-  .exhibits .show .show-image {
-    max-height: 180px;
-    overflow: hidden; }
-    .exhibits .show .show-image img {
-      width: 100%; }
+  .exhibits .showOne {
+    margin-bottom: 8%;
+    text-align: center;
+    color: #8d8e8f; }
+  .exhibits .show {
+    text-align: center;
+    margin-bottom: 4%;
+    color: #afb0b1; }
 
 .shop {
   padding: 10% 0;

@@ -1,45 +1,26 @@
-(function ( $ ) {
+$(document).ready(function(){
 
-  // var pathname = window.location.pathname;
-  // $('.navbar > li > a[href="'+pathname+'"]').parent().addClass('active');
-  //
-  // $(".navbar .nav-link").on("click", function(){
-  // $(".navbar").find(".active").removeClass("active");
-  // $(this).addClass("active");
-  // });
-}( jQuery ));
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
 
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
 
+        }
+    });
 
-// $(document).ready(function () {
-//     var url = window.location;
-//     $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
-//     $('ul.nav a').filter(function() {
-//          return this.href == url;
-//     }).parent().addClass('active');
-// });
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
 
-
-
-// This is where it all goes :)
-
-
-
-// $(document).ready(function(){
-//   $(".menu-icon").click(function(){
-//     $(".menu-icon").toggleClass("active")
-//   })
-// $(".menu-icon").click(function(){
-//     $(".sidebar").toggleClass("active")
-//   })
-// })
-
-
-// external js: masonry.pkgd.js
-
-// $('.grid').masonry({
-//   itemSelector: '.grid-item',
-//   columnWidth: 360,
-//   isFitWidth: true,
-//   gutter: 10
-// });
+});
