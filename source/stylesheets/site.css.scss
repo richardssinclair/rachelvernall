@@ -5,15 +5,13 @@
 body {
   font-family: 'Libre Baskerville', serif;
 }
+
 //home
 .title {
   text-align: center;
-  // font-family: 'Great Vibes', cursive;
   font-family: 'Libre Baskerville', serif;
 }
-
 .home {
-
   padding: 10% 20%;
   .home-image{
     display: flex;
@@ -32,17 +30,17 @@ body {
 
 //About
 .about {
-  padding: 10% 0;
+  padding-top: 100px;
   width: 70%;
   .bio-row-one {
     padding-bottom: 5%;
   }
+  .bio-text {
+    text-align: justify;
+  }
   .image {
-    max-height: 380px;
-    overflow: hidden;
-    display: flex;
+    margin-bottom: 8%;
     .bio {
-      margin-top: 28%;
       width: 100%;
       align-self: center;
       z-index: -1;
@@ -50,6 +48,13 @@ body {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .about {
+    width: 100%;
+  }
+}
+
+// Contact
 .contact {
   padding: 10% 0;
   width: 70%;
@@ -61,13 +66,18 @@ body {
 
 .gallery {
   margin: 0;
-  padding: 10% 1%;
+  padding-top: 100px;
   .row {
       display: -ms-flexbox; /* IE10 */
       display: flex;
       -ms-flex-wrap: wrap; /* IE10 */
       flex-wrap: wrap;
       padding: 0 4px;
+  }
+
+  .galleryFilter {
+    margin: 0 auto;
+    text-align: center;
   }
 
   /* Create four equal columns that sits next to each other */
@@ -80,6 +90,11 @@ body {
       .artpiece {
         position: relative;
         margin-bottom: 8px;
+        overflow: hidden;
+      }
+      .artpiece img {
+        transition: all .2s ease-in-out;
+
       }
       .overlay {
         position: absolute;
@@ -95,6 +110,13 @@ body {
       }
       .artpiece:hover .overlay {
         opacity: 1;
+
+      }
+      .artpiece:hover img {
+        transform: scale(1.1);
+        overflow: hidden;
+
+
       }
       .text {
         color: white;
@@ -178,16 +200,19 @@ body {
 
 //Exhibitions
 .exhibits {
-  padding: 10% 0;
+  padding-top: 100px;
+  // padding: 10% 0;
   width: 70%;
+  .showOne {
+    margin-bottom: 8%;
+    text-align: center;
+    color: #8d8e8f;
+
+  }
   .show {
-    .show-image {
-      max-height: 180px;
-      overflow: hidden;
-      img {
-        width: 100%;
-      }
-    }
+    text-align: center;
+    margin-bottom: 4%;
+    color: #afb0b1;
   }
 }
 
