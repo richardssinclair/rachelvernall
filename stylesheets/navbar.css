@@ -24,3 +24,6 @@
 @media screen and (max-width: 400px) {
   .title {
     font-size: 1.5em !important; } }
+@media screen and (max-width: 768px) {
+  .navbar .navbar-collapse {
+    margin-right: 0; } }

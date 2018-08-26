@@ -1,5 +1,4 @@
 @import url(navbar.css);
-@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
 body {
   font-family: 'Libre Baskerville', serif; }
@@ -46,17 +45,27 @@ body {
   .about {
     width: 100%; } }
 .contact {
-  padding: 10% 0;
+  padding-top: 100px;
   width: 70%; }
+  .contact h3 {
+    padding-bottom: 2%; }
   .contact .show {
     text-align: center; }
+  .contact .symbol {
+    color: #8d8e8f;
+    margin: 18px; }
+  .contact .symbol:hover {
+    color: black; }
+
+.modal-dialog {
+  padding-top: 100px; }
+
+.ekko-lightbox a:hover {
+  color: black; }
 
 .gallery {
   margin: 0;
-  padding-top: 100px;
-  /* Create four equal columns that sits next to each other */
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */ }
+  padding-top: 100px; }
   .gallery .row {
     display: -ms-flexbox;
     /* IE10 */
@@ -68,69 +77,67 @@ body {
     padding: 0 4px; }
   .gallery .galleryFilter {
     margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2%; }
+    .gallery .galleryFilter button:focus {
+      outline: none !important; }
+    .gallery .galleryFilter .active {
+      border-bottom: 1px solid black; }
+    .gallery .galleryFilter .active:focus {
+      outline: none !important; }
+  .gallery .artpiece {
+    position: relative;
+    margin-bottom: 8px;
+    overflow: hidden; }
+  .gallery .artpiece img {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
+  .gallery .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    background-color: rgba(15, 15, 15, 0.7); }
+  .gallery .artpiece:hover .overlay {
+    opacity: 1; }
+  .gallery .artpiece:hover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    overflow: hidden; }
+  .gallery .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     text-align: center; }
-  .gallery .column {
-    -ms-flex: 33%;
-    /* IE10 */
-    -webkit-box-flex: 33%;
-            flex: 33%;
-    max-width: 33%;
-    padding: 0 4px; }
-    .gallery .column .artpiece {
-      position: relative;
-      margin-bottom: 8px;
-      overflow: hidden; }
-    .gallery .column .artpiece img {
-      -webkit-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out; }
-    .gallery .column .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      width: 100%;
-      opacity: 0;
-      -webkit-transition: .5s ease;
-      transition: .5s ease;
-      background-color: rgba(15, 15, 15, 0.7); }
-    .gallery .column .artpiece:hover .overlay {
-      opacity: 1; }
-    .gallery .column .artpiece:hover img {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1);
-      overflow: hidden; }
-    .gallery .column .text {
-      color: white;
-      font-size: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center; }
-  .gallery .column img {
-    margin-top: 8px;
-    vertical-align: middle; }
-  @media screen and (max-width: 800px) {
-    .gallery .column {
-      -ms-flex: 50%;
-      -webkit-box-flex: 50%;
-              flex: 50%;
-      max-width: 50%; } }
-  @media screen and (max-width: 600px) {
-    .gallery .column {
-      -ms-flex: 100%;
-      -webkit-box-flex: 100%;
-              flex: 100%;
-      max-width: 100%; } }
 
-.post-content img {
-  width: 90%;
-  margin: 0 auto;
-  display: inherit; }
+.galleryPost {
+  padding-top: 100px; }
+  .galleryPost .backToGal {
+    position: absolute;
+    right: 10%;
+    color: #8d8e8f; }
+  .galleryPost .backToGal:hover {
+    color: black; }
+  .galleryPost .post-content {
+    margin-top: 2%; }
+    .galleryPost .post-content img {
+      width: 90%;
+      margin: 0 auto;
+      display: inherit; }
 
+@media screen and (max-width: 700px) {
+  .galleryPost .post-content {
+    margin-top: 5%; } }
 .exhibits {
   padding-top: 100px;
   width: 70%; }
@@ -142,9 +149,3 @@ body {
     text-align: center;
     margin-bottom: 4%;
     color: #afb0b1; }
-
-.shop {
-  padding: 10% 0;
-  width: 70%; }
-  .shop .image img {
-    max-height: 400px; }
