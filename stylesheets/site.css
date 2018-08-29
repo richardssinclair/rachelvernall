@@ -46,7 +46,10 @@ body {
     width: 100%; } }
 .contact {
   padding-top: 100px;
+  height: 100vh;
   width: 70%; }
+  .contact .show {
+    margin-top: 18%; }
   .contact h3 {
     padding-bottom: 2%; }
   .contact .show {
@@ -62,6 +65,10 @@ body {
 
 .ekko-lightbox a:hover {
   color: black; }
+
+.modal-backdrop.show {
+  opacity: 0.98;
+  background-color: #262626; }
 
 .gallery {
   margin: 0;
@@ -88,7 +95,8 @@ body {
   .gallery .artpiece {
     position: relative;
     margin-bottom: 8px;
-    overflow: hidden; }
+    overflow: hidden;
+    max-height: 300px; }
   .gallery .artpiece img {
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out; }
@@ -140,7 +148,10 @@ body {
     margin-top: 5%; } }
 .exhibits {
   padding-top: 100px;
+  height: 100vh;
   width: 70%; }
+  .exhibits .box {
+    margin-top: 12%; }
   .exhibits .showOne {
     margin-bottom: 8%;
     text-align: center;
